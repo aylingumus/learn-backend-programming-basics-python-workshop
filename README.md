@@ -6,7 +6,7 @@ Welcome, everyone! This workshop will be a fun and interactive introduction to b
 
 ## 1. What is Backend Programming?
 
-Backend programming is all about the parts of an application you don't see directly—think about how data is stored, how servers handle requests, and how information is processed before being shown on a website or in an app. We'll discuss:
+Backend programming is all about the parts of an application you don't see directly. Think about how data is stored, how servers handle requests, and how information is processed before being shown on a website or in an app. We'll discuss:
 - **Server-side logic** vs. **Client-side (frontend)**  
 - **Databases, servers, and APIs** as the backbone of most web applications  
 - We may even show a quick visual or diagram to illustrate how a request flows from a user's browser, through the internet, to a server, and back again.
