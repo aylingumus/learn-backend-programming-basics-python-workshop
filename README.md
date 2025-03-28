@@ -87,32 +87,28 @@ Let's make our code smart! We'll see how to let Python "decide" what to do:
 - **If statements**:
 
     ```python
- name = input("Enter your name: ")
-
-if name == "Eowyn":
-    print("I know your face, Eowyn.")
-
-else:
-    print("Good to see you again, " + name)
+    name = input("Enter your name: ")
+    if name == "Eowyn":
+        print("I know your face, Eowyn.")
+    else:
+        print("Good to see you again, " + name)
     ```
 
 - **For loops**:
 
     ```python
-   famous_women_in_tech = ["Ada Lovelace", "Hedy Lamarr", "Katherine Johnson"]
-
-for woman in famous_women_in_tech:
-    print("The great " + woman)
+     famous_women_in_tech = ["Ada Lovelace", "Hedy Lamarr", "Katherine Johnson"]
+     for woman in famous_women_in_tech:
+        print("The great " + woman)
     ```
 
 - **While loops**:
 
     ```python
-  count = 0
-
-while count < 5:
-    print(str(count) + " bottles of beer on the wall")
-    count += 1
+    count = 0
+    while count < 5:
+        print(str(count) + " bottles of beer on the wall")
+        count += 1
     ```
 
 We'll talk about how these loops work and best practices for avoiding infinite loops.
