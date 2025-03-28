@@ -27,6 +27,9 @@ We'll showcase how Python's simplicity makes it ideal for this hands-on workshop
 
 ## 3. What is Google Colab? How Do We Use It?
 
+
+[Google Colab](https://colab.research.google.com)
+
 Google Colab is a free cloud-based notebook environment that lets us write and run Python code in our browser. We'll walk through:
 - How to create a new notebook.
 - Running cells to execute code snippets.
@@ -88,6 +91,7 @@ Let's make our code smart! We'll see how to let Python "decide" what to do:
 
     ```python
     name = input("Enter your name: ")
+    
     if name == "Eowyn":
         print("I know your face, Eowyn.")
     else:
@@ -98,6 +102,7 @@ Let's make our code smart! We'll see how to let Python "decide" what to do:
 
     ```python
      famous_women_in_tech = ["Ada Lovelace", "Hedy Lamarr", "Katherine Johnson"]
+    
      for woman in famous_women_in_tech:
         print("The great " + woman)
     ```
