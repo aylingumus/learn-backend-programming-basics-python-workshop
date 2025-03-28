@@ -9,7 +9,8 @@ Welcome, everyone! This workshop will be a fun and interactive introduction to b
 Backend programming is all about the parts of an application you don't see directly. Think about how data is stored, how servers handle requests, and how information is processed before being shown on a website or in an app. We'll discuss:
 - **Server-side logic** vs. **Client-side (frontend)**  
 - **Databases, servers, and APIs** as the backbone of most web applications  
-- We may even show a quick visual or diagram to illustrate how a request flows from a user's browser, through the internet, to a server, and back again.
+
+![image](https://github.com/user-attachments/assets/942d8703-d282-4c74-b574-8292fa39b74e)
 
 ---
 
@@ -86,26 +87,32 @@ Let's make our code smart! We'll see how to let Python "decide" what to do:
 - **If statements**:
 
     ```python
-    if age >= 18:
-        print("You are an adult.")
-    else:
-        print("You are a minor.")
+ name = input("Enter your name: ")
+
+if name == "Eowyn":
+    print("I know your face, Eowyn.")
+
+else:
+    print("Good to see you again, " + name)
     ```
 
 - **For loops**:
 
     ```python
-    for i in range(5):
-        print(i)
+   famous_women_in_tech = ["Ada Lovelace", "Hedy Lamarr", "Katherine Johnson"]
+
+for woman in famous_women_in_tech:
+    print("The great " + woman)
     ```
 
 - **While loops**:
 
     ```python
-    count = 0
-    while count < 5:
-        print(count)
-        count += 1
+  count = 0
+
+while count < 5:
+    print(str(count) + " bottles of beer on the wall")
+    count += 1
     ```
 
 We'll talk about how these loops work and best practices for avoiding infinite loops.
@@ -216,6 +223,31 @@ If time allows, we'll also take a peek at the Carbon Ledger API. This is where y
 4. Parse the JSON response to display it nicely.
 
 By the end, you'll have a simple, functioning mini-app that talks to the Carbon Interface API!
+
+```python
+import requests
+
+url = "https://www.carboninterface.com/api/v1/estimates"
+headers = {
+    "Authorization": "Bearer API_KEY",  # Replace with your actual API key
+    "Content-Type": "application/json"
+}
+data = { "type": "flight",
+        "passengers": 2,
+        "legs": [
+          {"departure_airport": "sfo", "destination_airport": "yyz"},
+          {"departure_airport": "yyz", "destination_airport": "sfo"}
+        ]}
+
+response = requests.post(url, headers=headers, json=data)
+print(response.json())
+
+
+# Extract and print the carbon_kg value
+data = response.json()  # Now it's a dictionary
+carbon_kg = data['data']['attributes']['carbon_kg']
+print("Carbon emissions (kg):", carbon_kg)
+```
 
 ---
 
